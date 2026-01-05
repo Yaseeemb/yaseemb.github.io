@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gwajin Halayya & Hotuna</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Binciken Halayya</h1>
+        
+        <div class="input-section">
+            <div class="user-input">
+                <input type="text" id="name1" placeholder="Sunan Mutum na 1">
+                <input type="file" id="pic1" accept="image/*" onchange="previewImage(event, 'img-prev1')">
+            </div>
+            <div class="user-input">
+                <input type="text" id="name2" placeholder="Sunan Mutum na 2">
+                <input type="file" id="pic2" accept="image/*" onchange="previewImage(event, 'img-prev2')">
+            </div>
+        </div>
+
+        <button class="main-btn" onclick="generateTraits()">Fara Bincike</button>
+
+        <div id="capture-area" class="hidden">
+            <div class="results-grid">
+                <div class="result-column">
+                    <img id="img-prev1" src="#" alt="Hoto" class="user-img">
+                    <h3 id="display-name1">---</h3>
+                    <div class="trait-card"><span>🔥 FUSHI</span> <strong id="n1-anger">0%</strong></div>
+                    <div class="trait-card"><span>❤️ SOYAYYA</span> <strong id="n1-love">0%</strong></div>
+                    <div class="trait-card"><span>⏳ HAKURI</span> <strong id="n1-patience">0%</strong></div>
+                    <div class="trait-card"><span>✨ TSAKIYA</span> <strong id="n1-purity">0%</strong></div>
+                    <div class="trait-card"><span>💪 KARFI</span> <strong id="n1-strength">0%</strong></div>
+                </div>
+
+                <div class="result-column">
+                    <img id="img-prev2" src="#" alt="Hoto" class="user-img">
+                    <h3 id="display-name2">---</h3>
+                    <div class="trait-card"><span>🔥 FUSHI</span> <strong id="n2-anger">0%</strong></div>
+                    <div class="trait-card"><span>❤️ SOYAYYA</span> <strong id="n2-love">0%</strong></div>
+                    <div class="trait-card"><span>⏳ HAKURI</span> <strong id="n2-patience">0%</strong></div>
+                    <div class="trait-card"><span>✨ TSAKIYA</span> <strong id="n2-purity">0%</strong></div>
+                    <div class="trait-card"><span>💪 KARFI</span> <strong id="n2-strength">0%</strong></div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="actions" class="hidden">
+            <button class="download-btn" onclick="downloadResult()">Ajiye Hoton (Download)</button>
+            <button class="reset-btn" onclick="location.reload()">Sake Gwaji</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
